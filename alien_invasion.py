@@ -55,6 +55,10 @@ class AlienInvasion:
             self.ship.moving_right = True
         if event.key == pygame.K_LEFT:
             self.ship.moving_left = True
+        # if event.key == pygame.K_DOWN:
+        #     self.ship.moving_down = True
+        # if event.key == pygame.K_UP:
+        #     self.ship.moving_up = True
 
     def _check_keyup_events(self, event):
         """Respond to keypresses."""
@@ -62,6 +66,10 @@ class AlienInvasion:
             self.ship.moving_right = False
         if event.key == pygame.K_LEFT:
             self.ship.moving_left = False
+        # if event.key == pygame.K_DOWN:
+        #     self.ship.moving_down = False
+        # if event.key == pygame.K_UP:
+        #     self.ship.movi = False
 
     def _update_screen(self):
         # redraw the screen during each pass through the loop
