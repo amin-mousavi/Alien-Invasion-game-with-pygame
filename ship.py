@@ -18,12 +18,11 @@ class Ship:
 
         # Store a decimal value for the ship's horizontal position.
         self.x = float(self.rect.x)
-        # self.y = float(self.rect.y)
+
         # Movement flag
         self.moving_right = False
         self.moving_left = False
-        # self.moving_up = False
-        # self.moving_down = False
+
 
     def update(self):
         """Update the ship's position based on the movement flag."""
@@ -40,4 +39,9 @@ class Ship:
     def blitem(self):
         """Draw the ship at its current location."""
         self.screen.blit(self.image, self.rect)
+
+    def center_ship(self):
+        """Center the ship on the screen."""
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
 
